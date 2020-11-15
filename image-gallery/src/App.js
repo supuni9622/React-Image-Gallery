@@ -1,9 +1,9 @@
-import './App.css';
+import Title from './components/Title'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      React Image Gallery
+      <Title/>
     </div>
   );
 }
