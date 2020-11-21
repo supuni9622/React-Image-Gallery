@@ -11,6 +11,7 @@ const useFirestore = (collection) => {
             .orderBy('createdAt', 'desc')
             .onSnapshot((snap)=> {
 
+                // Set firestore data to access 
                 let documents = []
                 snap.forEach(doc => {
                     documents.push({...doc.data(), id : doc.id})
@@ -20,7 +21,7 @@ const useFirestore = (collection) => {
 
         // useEffect cleanup funcion
         return () => unsub()
-        
+
     },[collection])
 
     return { docs }
