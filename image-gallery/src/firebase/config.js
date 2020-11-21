@@ -20,5 +20,9 @@ firebase.initializeApp(firebaseConfig);
 // Create storage 
 const projectStorage = firebase.storage()
 const projectFirestore = firebase.firestore()
+const timeStamp = firebase.firestore.FieldValue.serverTimestamp
 
-export {projectStorage, projectFirestore}
+export {projectStorage, projectFirestore, timeStamp}
+
+
+// Here we use Cloud firestore, and storage from firebase

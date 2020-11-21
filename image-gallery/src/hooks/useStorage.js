@@ -1,7 +1,7 @@
 // Custom hook for store in firebase
 
 import {useState, useEffect } from 'react'
-import {projectStorage} from '../firebase/config'
+import {projectStorage, projectFirestore, timeStamp} from '../firebase/config'
 
 // Handling file upload and return useful values
 const useStorage = (file) => {
@@ -12,6 +12,7 @@ const useStorage = (file) => {
     useEffect(() => {
         // References
         const storageRef = projectStorage.ref(file.name)
+        const collectionRef = projectFirestore.collection("images")
         
         // Upload to firebase storage 
         //Here pass 3 arguments (snap, err)
@@ -22,6 +23,8 @@ const useStorage = (file) => {
             setError(err)
         }, async() => {
             const url = await storageRef.getDownloadURL()
+            const createdAt = timeStamp()
+            collectionRef.add({url, createdAt})
             setUrl(url)
         })
     }, [file,setProgress,setError,setUrl])
