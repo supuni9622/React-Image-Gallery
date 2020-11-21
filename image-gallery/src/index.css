@@ -30,3 +30,10 @@ body{
   margin-top: 60px;
   font-size: 2.6rem;
 }
+
+/* Progress bar styles*/
+.progress-bar {
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+}

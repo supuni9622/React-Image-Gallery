@@ -5,7 +5,7 @@ import {projectStorage} from '../firebase/config'
 
 // Handling file upload and return useful values
 const useStorage = (file) => {
-    const [progress, setProgress] = useState(0)
+    const [progress, setProgress] = useState(0.00)
     const [error, setError] = useState(null)
     const [url, setUrl] = useState(null)
 
@@ -24,10 +24,10 @@ const useStorage = (file) => {
             const url = await storageRef.getDownloadURL()
             setUrl(url)
         })
-    }, [file])
+    }, [file,setProgress,setError,setUrl])
 
     return {progress, error, url}
  }
 
- export default useState
+ export default useStorage
   
