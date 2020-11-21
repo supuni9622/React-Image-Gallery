@@ -7,7 +7,9 @@
 /* Base styles & title*/
 body{
   font-family: 'Times New Roman', Times, serif;
-  color: var(--secondary)
+  color: var(--secondary);
+  background-color: rgb(0, 0, 22);
+  
 }
 
 .App{
@@ -62,6 +64,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 10px;
 }
 
 /* Modal styles*/
@@ -80,6 +83,7 @@ body{
   max-width: 60%;
   max-height: 80%;
   margin: 60px auto;
-  box-shadow: 3px 5px 7px rgba(o,0,0,0.5);
+  box-shadow: 3px 5px 7px rgba(231, 224, 224, 0.5);
   border: 3px solid white;
+  border-radius: 20px;
 }

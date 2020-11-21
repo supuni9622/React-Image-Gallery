@@ -4,8 +4,7 @@ const Title = () => {
     return (
         <div className='title'>
             <h1>FireGram</h1>
-            <h2>Your Pictures</h2>
-            <p>jhhgjfghfg </p>
+            <h2>React - Firebase Photo Gallery</h2>
         </div>
     )
 }
