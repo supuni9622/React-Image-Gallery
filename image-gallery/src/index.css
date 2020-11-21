@@ -47,7 +47,7 @@ body{
 }
 
 .img-wrap{
-  /* overflow: hidden; */
+  overflow: hidden;
   height: 0;
   padding: 50% 0;
   position: relative;
@@ -55,9 +55,10 @@ body{
 }
 
 .img-wrap img{
-  min-width: 80%;
-  min-height: 80%;
+  min-width: 50%;
+  min-height: 40%;
   max-width: 100%;
+  max-height: 200%;
   position: absolute;
   top: 0;
   left: 0;
