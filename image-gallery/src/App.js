@@ -3,6 +3,7 @@ import Title from './components/Title'
 import UploadForm from './components/UploadForm'
 import ImageGrid from './components/ImageGrid'
 import Modal from './components/Modal'
+import Pagination from './components/Pagination'
 
 const App = () => {
 
@@ -12,8 +13,9 @@ const App = () => {
     <div className="App">
       <Title/>
       <UploadForm/>
-      <ImageGrid setSelectedImg={setSelectedImg} />
+      {/* <ImageGrid setSelectedImg={setSelectedImg} /> */}
       {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>}
+      <Pagination setSelectedImg={setSelectedImg}/>
     </div>
   );
 }
