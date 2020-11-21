@@ -16,3 +16,9 @@
   };
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+// Create storage 
+const projectStorage = firebase.storage()
+const projectFirestore = firebase.firestore()
+
+export {projectStorage, projectFirestore}
